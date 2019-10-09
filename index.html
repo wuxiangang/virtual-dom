@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Socket.IO chat</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font: 13px Helvetica, Arial; }
+      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
+      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+      #messages { list-style-type: none; margin: 0; padding: 0; }
+      #messages li { padding: 5px 10px; }
+      #messages li:nth-child(odd) { background: #eee; }
+    </style>
+  </head>
+  <body>
+    <ul id="messages"></ul>
+    <form action="">
+      <input id="m" autocomplete="off" /><button type="button">Send</button>
+    </form>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script> -->
+    <!-- <script src="diff/diff-list.js"></script> -->
+      <script>
+
+
+
+          const uls = {
+            tagName: 'ul',
+            props: {
+              key: 1,
+              id: 'lists2'
+            },
+            children: [
+              {
+                tagName: 'li',
+                props: {
+                  key: 1,
+                  class: 'items',
+                },
+                children: [{
+                  tagName: 'button',
+                  props: {key: 1},
+                  children: ['这里22222']
+                }]
+              },{
+                tagName: 'li',
+                props: {key: 3},
+                children: ['li信息']
+              },
+              {
+                tagName: 'div',
+                props: {key: 4},
+                children: ['div信息']
+              }
+            ]
+          }
+
+          // const newTree =  createElement(uls)
+          // console.log(diff(tree.children, newTree.children, 'key'))
+          // function diff(oldTree, newTree) {
+          //   const patches = {}
+          //   const index = 0
+          //   dfWalk(oldTree, newTree, index, patches)
+          //   return patches
+          // }
+
+          // function dfWalk(oldNode, newNode, index, patches){
+          //   const currentPatch = []
+          //   if (!newNode) {
+
+          //   } else if (isString(oldNode) && isString(newNode)) {
+          //     if (oldNode !== newNode) {
+          //       currentPatch.push({type: 'TEXT', content: newNode})
+          //     }
+          //   } else if (
+          //     oldNode.tagName === newNode.tagName &&
+          //     oldNode.key === newNode.key
+          //   ) {
+          //     const dfp = diffProps(oldNode.props, newNode.props)
+          //     dfp && currentPatch.push({type: 'PROPS', props: newNode})
+          //     // diffChild(oldNode, newNode, index, patches)
+          //   } else {
+          //     currentPatch.push({type: 'REPLACE', node: newNode})
+          //   }
+          //   currentPatch.length && (patches[index] = currentPatch)
+          // }
+
+          // function diffProps(oldProps, newProps) {
+          //   const dfp = {}
+          //   let count = 0
+          //   for (const key in oldProps) {
+          //     if (oldProps[key] !== newProps[key]) {
+          //       dfp[key] = newProps[key]
+          //       count++
+          //     }
+          //   }
+
+          //   for (const key in newProps) {
+          //     if (!oldProps.hasOwnProperty(key)) {
+          //       dfp[key] = newProps[key]
+          //       count++
+          //     }
+          //   }
+
+          //   if (!count) {
+          //     return null
+          //   }
+
+          //   return dfp
+          // }
+
+          // function isString(k) {
+          //   return k.constructor === String
+          // }
+
+          // console.log(diff(tree, newTree))
+      </script>
+  </body>
+</html>
